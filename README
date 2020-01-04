@@ -1,0 +1,80 @@
+/********************************************************************************************************************
+*	File: README
+*	Name: Andrew Craig
+*	CruzID: acraig1
+*	Assignment: pa5
+*********************************************************************************************************************/
+
+
+/********************************************************************************************************************
+*											   List ADT
+*********************************************************************************************************************/
+
+Description: The purpose of the List ADT is to implement a doubly linked list that stores integers. Keeps track of
+			 the location of the front of the list, the back of the list, and a cursor that has the ability to
+			 traverse the list at will.
+			 
+			 Contains the following functions: 
+			 		* Constructors and destructors to create new lists and destory old ones.
+			 		* Access functions to retrive data on the current list or to find the current position of 
+			 		  the cursor.
+			 		* Manipulation procedures to add or remove elements from the current list and to change
+			 		  the location of the cursor.
+			 		* Misc. operations to print, copy, or concatenate a list.
+
+/********************************************************************************************************************
+*											   Graph ADT
+*********************************************************************************************************************/
+
+Description: The purpose of the Graph ADT is to create an object that represents a mathmatical graph and run the
+			 DFS algorithm on the Graph object. The underlying structure contains several fields. An array of Lists
+			 to store the adjacency list of each vertex. Two arrays that store integers used to track the parent,
+			 discovery time, and finish time of each vertex. An array of characters to store the color of each vertex 
+			 which is used in the BFS function. Finally an order field to store the number of vertices, a size 
+			 field to store the number of edges, and a source field to store the last source used in BFS. 
+			 
+			 Contains the following functions: 
+			 		* Constructors and destructors to create new Graphs and destory old ones.
+			 		* Access fucntions to retrieve the order, size, discovery time, and finish time of a given Graph 
+			 		  object.
+			 		* Manipulation procedures to reset a Graph to the NULL state, add a directed or an undirected
+			 		  edge to a Graph, and the ability to run the DFS algorithm on a given Graph and source.
+			 		* Other operations that can print the adjacency list representation of a Graph to filestream 
+			 		  out, make a copy of a Graph object, and find the transpose of a Graph object.
+
+
+/********************************************************************************************************************
+*											Included Files
+*********************************************************************************************************************/
+
+1)	File: FindComponents.c
+	Description: The client module for the Graph ADT. Frist reads the values from a given input file and generates
+				 a new Graph based off of them. Then uses the DFS algorithm to find and print the strongly connected
+				 components of hte graph.
+				 
+2)	File: Graph.c
+	Description: Implementation file for Graph ADT, containing struct and function definitions. Also contains the
+				 delcaration and implementation of the Graph struct and its associated constructors and destructors. 
+
+3)	File: Graph.h
+	Description: Header file for Graph ADT, contains the typedef of the GraphObj and prototypes of exported functions.
+
+4)	File: GraphTest.c
+	Description: Test file for the Graph ADT to test the functions of Graph in isolation.
+
+5)	File: List.h
+	Description: Header file for List ADT, contains the typedef of the ListObj and prototypes of exported functions.
+
+6)	File: List.c
+	Description: Implementation file for List ADT, containing struct and function definitions. Also contains the
+				 delcaration and implementation of the NodeObj struct and its associated constructors and destructors.
+
+6)	File: ListTest.c
+	Description: Test file for the List ADT to test the functions of List in isolation.
+
+8)	File: Makefile
+	Description: Has the ability to create an executable binary files for FindPath.c, GraphTest.c, and ListTest.c. Also 
+				 can remove any .o files associated with FindPath.c, GraphTest.c, and ListTest.c once finished.
+
+9)	File: README
+	Description: Provides a brief description of each file its role in the project.
